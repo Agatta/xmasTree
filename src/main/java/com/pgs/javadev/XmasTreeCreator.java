@@ -10,15 +10,13 @@ public class XmasTreeCreator {
         String tree = "";
 
         for (int i = 0; i < levels; i++) {
-            if (i < levels -1 ) {
-                tree += printLevel(levels, i, text) + "\n";
-            }
-            else {
-                tree += printLevel(levels, i, text);
+            tree += printLevel(levels, i, text) ;
+            boolean isNotLastLevel = i < levels - 1;
+            if (isNotLastLevel) {
+                tree += "\n";
             }
 
         }
-
 
         return tree;
     }
