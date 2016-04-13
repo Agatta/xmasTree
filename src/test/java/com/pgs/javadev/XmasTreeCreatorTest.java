@@ -17,13 +17,13 @@ public class XmasTreeCreatorTest {
 
     @Test
     public void testSingleRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 1);
+        String tree = xmasTreeCreator.createXmasTree("x", 1, 1);
         assertThat(tree, equalTo("x"));
     }
 
     @Test
     public void testEvenRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 2);
+        String tree = xmasTreeCreator.createXmasTree("x", 2, 1);
         assertThat(tree, equalTo(
                 " x\n" +
                 "xxx"));
@@ -31,7 +31,7 @@ public class XmasTreeCreatorTest {
 
     @Test
     public void testOddRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 3);
+        String tree = xmasTreeCreator.createXmasTree("x", 3, 1);
         assertThat(tree, equalTo(
                 "  x\n" +
                 " xxx\n" +
